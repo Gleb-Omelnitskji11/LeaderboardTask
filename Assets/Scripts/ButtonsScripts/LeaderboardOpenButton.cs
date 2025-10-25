@@ -18,14 +18,14 @@ namespace ButtonsScripts
 
         private void OnButtonClick()
         {
-            m_Button.interactable = false;
+            m_Button.onClick.RemoveListener(OnButtonClick);
             m_PopupManagerService.OpenPopup(Constants.Popups.LeaderboardPopup, null);
             Invoke(nameof(ActivateButton), 1f);
         }
 
         public void ActivateButton()
         {
-            m_Button.interactable = true;
+            m_Button.onClick.AddListener(OnButtonClick);
         }
     }
 }
