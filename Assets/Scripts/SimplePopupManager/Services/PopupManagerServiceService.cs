@@ -17,6 +17,12 @@ namespace SimplePopupManager
     public class PopupManagerServiceService : IPopupManagerService
     {
         private readonly Dictionary<string, GameObject> m_Popups = new();
+        private Canvas m_PopupCanvas;
+
+        public void SetCanvas(Canvas canvas)
+        {
+            m_PopupCanvas = canvas;
+        }
 
         /// <summary>
         ///     Opens a popup by its name and initializes it with the given parameters.
@@ -59,7 +65,7 @@ namespace SimplePopupManager
         /// <param name="param">The parameters to initialize the popup with.</param>
         private async Task LoadPopup(string name, object param)
         {
-            AsyncOperationHandle<GameObject> handle = Addressables.InstantiateAsync(name);
+            AsyncOperationHandle<GameObject> handle = Addressables.InstantiateAsync(name, m_PopupCanvas.transform);
             await handle.Task;
 
             if (handle.Status == AsyncOperationStatus.Succeeded)

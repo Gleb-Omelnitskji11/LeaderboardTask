@@ -4,6 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/GameResources/Scenes/PreloadScene.unity
+    guid: a4753e8a7e045474693416bd2ed54f08
+  - enabled: 1
+    path: Assets/GameResources/Scenes/MenuScene.unity
+    guid: 0fde973fd68ffe24fae046da1f031409
   m_configObjects:
-    com.unity.addressableassets: {fileID: 11400000, guid: 9a3bcfef5f53a455081c8185544f8c40, type: 2}
+    com.unity.addressableassets: {fileID: 11400000, guid: 9c4a3b6103ee74e45b211ad9fc9eefe5, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: a49da14da39c0e34c8d432f778a6a2b6, type: 2}

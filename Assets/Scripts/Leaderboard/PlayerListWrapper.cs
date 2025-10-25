@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+[System.Serializable]
 public class PlayerListWrapper
 {
-    public List<PlayerModel> players;
+    public PlayerModel[] leaderboard;
 }

@@ -4,11 +4,13 @@
 //of Sophun Games LTD is strictly prohibited and could be subject to legal action.
 
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace SimplePopupManager
 {
     public interface IPopupManagerService
     {
+        public void SetCanvas(Canvas canvas);
         /// <summary>
         ///     Opens a popup by its name and initializes it with the given parameters.
         ///     If the popup is already loaded, it will log an error and return.
